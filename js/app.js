@@ -16,8 +16,8 @@ const playheadPlugin = {
     const xPixel = x.getPixelForValue(video.currentTime);
 
     ctx.save();
-    ctx.fillStyle = "rgba(30,144,255, 0.4)"; // solid blue with some transparency
-    const lineWidth = 5; // width in pixels
+    ctx.fillStyle = "rgba(30,144,255)"; // solid blue with some transparency
+    const lineWidth = 3; // width in pixels
     ctx.fillRect(xPixel - lineWidth/2, y.top, lineWidth, y.bottom - y.top);
     ctx.restore();
   }
@@ -102,7 +102,7 @@ function parseTxtAndDraw(text) {
           label: "Playhead",
           data: [{ x: 0, y: 0 }],    // initial position
           borderColor: "blue",       // optional outline
-          backgroundColor: "blue",   // fill color
+          backgroundColor: "rgba(30,144,255)",   // fill color
           pointStyle: 'rect',        // <-- makes the marker a rectangle
           rotation: 0,               // no rotation
           pointRadius: 6,            // width of the rectangle
@@ -128,7 +128,9 @@ function parseTxtAndDraw(text) {
       }
       },
       plugins: {
-        legend: { display: true }
+        legend: { 
+          labels: { color: "white"},
+          display: true }
       },
       onClick: (evt) => {
         const xScale = chart.scales.x;
