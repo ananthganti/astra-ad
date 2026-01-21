@@ -1,0 +1,45 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  margin: 0;
+  padding: 0 24px 24px 24px; /* reduce top padding from 24px -> 12px */
+}
+
+h1 { margin-bottom: 12px; font-size: 1.5rem; }
+
+.video-wrapper {
+  position: relative;
+  max-width: 600px;   /* video smaller */
+  width: 100%;
+  margin: 0 auto 4px auto; /* center video and add spacing below */
+  background: #020617;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+video { width: 100%; display: block; border-radius: 16px; }
+
+canvas.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.panel {
+  background: #020617;
+  border-radius: 16px;
+  padding: 10px 16px;
+  /* Remove max-width or allow horizontal scroll */
+  width: auto;           /* panel width follows content */
+  overflow-x: auto;      /* scroll if chart is wider than panel */
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+canvas#chart {
+  width: 1400px !important;
+  height: 400px !important; /* taller chart */
+}

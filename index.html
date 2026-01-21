@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video + TXT Plot Demo</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <select id="videoSelect">
+    <option value="">Select demo video</option>
+  </select>
+ 
+  <div class="video-wrapper">
+    <video id="video" controls crossorigin="anonymous"></video>
+    <canvas id="overlay" class="overlay"></canvas>
+  </div>
+</div>
+
+<div class="panel">
+  <h2 style="font-size:1.1rem;margin-bottom:8px">Model Output / TXT Data</h2>
+  <canvas id="chart"></canvas>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
