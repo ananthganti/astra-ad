@@ -13,7 +13,7 @@ const playheadPlugin = {
     if (!video.currentTime) return;
 
     // Convert current video time to pixel on x-axis
-    const xPixel = x.getPixelForValue(video.currentTime);
+    const xPixel = x.getPixelForValue(video.currentTime-1.0);
 
     ctx.save();
     ctx.fillStyle = "rgba(30,144,255)"; // solid blue with some transparency
@@ -150,12 +150,12 @@ function parseTxtAndDraw(text) {
 video.addEventListener("timeupdate", () => {
   if (!chart || !dataPoints.length) return;
 
-  const currentTime = video.currentTime;
+  const currentTime = video.currentTime-1.0;
   chart.data.datasets[2].data = [{ x: currentTime, y: 0 }];
   chart.update("none"); // fast update without animation
 });
 
-video.addEventListener("timeupdate", () => {
-  if (!chart) return;
-  chart.update("none"); // redraw plugin without animating datasets
-});
+// video.addEventListener("timeupdate", () => {
+//   if (!chart) return;
+//   chart.update("none"); // redraw plugin without animating datasets
+// });
