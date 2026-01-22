@@ -36,8 +36,10 @@ fetch("data/videos.json")
 
     videoSelect.addEventListener("change", () => {
       const id = videoSelect.value;
+      alert("hi venki")
       if (!id) return;
       const videoItem = list.find(v => v.id === id);
+      alert("venkata")
       loadVideoAndTxt(`data/${videoItem.video}`, `data/${videoItem.txt}`);
     });
   });
