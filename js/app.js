@@ -36,10 +36,10 @@ fetch("data/videos.json")
 
     videoSelect.addEventListener("change", () => {
       const id = videoSelect.value;
-      alert("hi venki")
+      console.log("hi venki")
       if (!id) return;
       const videoItem = list.find(v => v.id === id);
-      alert("venkata")
+      console.log("venkata")
       loadVideoAndTxt(`data/${videoItem.video}`, `data/${videoItem.txt}`);
     });
   });
@@ -47,7 +47,7 @@ fetch("data/videos.json")
 // Load video and TXT
 function loadVideoAndTxt(videoPath, txtPath) {
   video.src = videoPath;
-  alert(video.src)
+  console.log(video.src)
   fetch(txtPath)
     .then(r => r.ok ? r.text() : Promise.reject("TXT not found"))
     .then(txt => parseTxtAndDraw(txt))
