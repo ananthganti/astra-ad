@@ -155,6 +155,15 @@ video.addEventListener("timeupdate", () => {
   chart.update("none"); // fast update without animation
 });
 
+window.addEventListener("load", () => {
+  const modal = document.getElementById("introModal");
+  const okBtn = document.getElementById("modalOkBtn");
+
+  okBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+});
+
 // video.addEventListener("timeupdate", () => {
 //   if (!chart) return;
 //   chart.update("none"); // redraw plugin without animating datasets
