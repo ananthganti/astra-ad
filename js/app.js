@@ -48,7 +48,9 @@ fetch("data/videos.json")
 
 // Load video and TXT
 function loadVideoAndTxt(videoPath, txtPath) {
-  video.src = videoPath;
+  // video.src = videoPath;
+  video.src = "data/Accidents_2.mp4"
+  video.load();
   console.log(video.src)
   fetch(txtPath)
     .then(r => r.ok ? r.text() : Promise.reject("TXT not found"))
