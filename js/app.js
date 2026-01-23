@@ -1,9 +1,13 @@
 const video = document.getElementById("video");
 const videoSelect = document.getElementById("videoSelect");
+const prevBtn = document.getElementById("prevFrame");
+const nextBtn = document.getElementById("nextFrame");
 const ctx = document.getElementById("chart").getContext("2d");
-const FPS = 30;
+const FPS = 60;
 let chart;
 let dataPoints = [];
+
+const frameStep = 1 / FPS;
 
 const playheadPlugin = {
   id: "playhead",
@@ -13,7 +17,7 @@ const playheadPlugin = {
     if (!video.currentTime) return;
 
     // Convert current video time to pixel on x-axis
-    const xPixel = x.getPixelForValue(video.currentTime-1.0);
+    const xPixel = x.getPixelForValue(video.currentTime);
 
     ctx.save();
     ctx.fillStyle = "rgba(30,144,255)"; // solid blue with some transparency
@@ -152,7 +156,7 @@ function parseTxtAndDraw(text) {
 video.addEventListener("timeupdate", () => {
   if (!chart || !dataPoints.length) return;
 
-  const currentTime = video.currentTime-1.0;
+  const currentTime = video.currentTime;
   chart.data.datasets[2].data = [{ x: currentTime, y: 0 }];
   chart.update("none"); // fast update without animation
 });
@@ -166,7 +170,17 @@ window.addEventListener("load", () => {
   });
 });
 
-// video.addEventListener("timeupdate", () => {
-//   if (!chart) return;
-//   chart.update("none"); // redraw plugin without animating datasets
-// });
+function stepFrame(direction) {
+  video.pause();
+
+  let newTime = video.currentTime + direction * frameStep;
+
+  // Clamp to video duration
+  newTime = Math.max(0, Math.min(newTime, video.duration));
+
+  video.currentTime = newTime;
+}
+
+// Button events
+prevBtn.addEventListener("click", () => stepFrame(-1));
+nextBtn.addEventListener("click", () => stepFrame(1));

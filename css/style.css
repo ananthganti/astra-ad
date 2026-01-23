@@ -21,6 +21,27 @@ h1 { margin-bottom: 12px; font-size: 1.5rem; }
 
 video { width: 100%; display: block; border-radius: 16px; }
 
+.frame-controls {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.frame-controls button {
+  background: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.frame-controls button:hover {
+  background: #334155;
+}
+
 canvas.overlay {
   position: absolute;
   top: 0;
