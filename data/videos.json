@@ -8,8 +8,8 @@
   {
     "id": "Accident_2",
     "name": "Accident 2",
-    "video": "Accidents_2.mp4",
-    "txt": "Accidents_2.txt"
+    "video": "data/Accidents_2.mp4",
+    "txt": "data/Accidents_2.txt"
   },
   {
     "id": "Accident_3",
