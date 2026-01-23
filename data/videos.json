@@ -1,15 +1,15 @@
 [
   {
     "id": "Accident_1",
-    "name": "Accident_1",
+    "name": "Accident 1",
     "video": "Accidents_1.mp4",
     "txt": "Accidents_1.txt"
   },
   {
     "id": "Accident_2",
     "name": "Accident 2",
-    "video": "data/Accidents_2.mp4",
-    "txt": "data/Accidents_2.txt"
+    "video": "Accidents_2.mp4",
+    "txt": "Accidents_2.txt"
   },
   {
     "id": "Accident_3",

@@ -44,7 +44,7 @@ fetch("data/videos.json")
       if (!id) return;
       const videoItem = list.find(v => v.id === id);
       console.log("venkata")
-      loadVideoAndTxt(`data/${videoItem.video}`, `data/${videoItem.txt}`);
+      loadVideoAndTxt(`data\\${videoItem.video}`, `data\\${videoItem.txt}`);
     });
   });
 
