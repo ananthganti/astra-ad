@@ -43,7 +43,7 @@ fetch("data/videos.json")
       if (!id) return;
       const videoItem = list.find(v => v.id === id);
       loadVideoAndTxt(`data/${videoItem.video}`, `data/${videoItem.txt}`);
-      video.play().catch(err => console.log("Play blocked:", err));
+      // video.play().catch(err => console.log("Play blocked:", err));
     });
   });
 
