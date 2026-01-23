@@ -18,36 +18,6 @@
     "txt": "Accidents_3.txt"
   },
   {
-    "id": "Accident_4",
-    "name": "Accident 4",
-    "video": "Accidents_4.mp4",
-    "txt": "Accidents_4.txt"
-  },
-  {
-    "id": "Accident_5",
-    "name": "Accident 5",
-    "video": "Accidents_5.mp4",
-    "txt": "Accidents_5.txt"
-  },
-  {
-    "id": "Accident_6",
-    "name": "Accident 6",
-    "video": "Accidents_6.mp4",
-    "txt": "Accidents_6.txt"
-  },
-  {
-    "id": "Accident_7",
-    "name": "Accident 7",
-    "video": "Accidents_7.mp4",
-    "txt": "Accidents_7.txt"
-  },
-  {
-    "id": "Accident_8",
-    "name": "Accident 8",
-    "video": "Accidents_8.mp4",
-    "txt": "Accidents_8.txt"
-  },
-  {
     "id": "Arson_1",
     "name": "Arson 1",
     "video": "Arson_1.mp4",
@@ -154,18 +124,6 @@
     "name": "Shooting 3",
     "video": "Shooting_3.mp4",
     "txt": "Shooting_3.txt"
-  },
-  {
-    "id": "Shooting_4",
-    "name": "Shooting 4",
-    "video": "Shooting_4.mp4",
-    "txt": "Shooting_4.txt"
-  },
-  {
-    "id": "Shooting_5",
-    "name": "Shooting 5",
-    "video": "Shooting_5.mp4",
-    "txt": "Shooting_5.txt"
   },
   {
     "id": "Slipfall_1",
